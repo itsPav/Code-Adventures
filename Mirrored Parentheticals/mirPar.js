@@ -46,38 +46,36 @@
   const mirPar = s => {
     
     // your code goes here
-    var brackets = [];
     var stringStart = 0;
     var stringEnd = 0;
 
     for(let i = 0; i < s.length; i += 1) {
-      if(s[i] == "(" && s[i+1] != '(') 
-        stringStart = i+1;
-      if(s[i] == ")" && s[i-1] != ')') 
-        stringEnd = i-1;
+      if(s[i] == '(' && s[i+1] !== "(") 
+        stringStart = i;
+      if(s[i] == ")" && s[i-1] !== ")") 
+        stringEnd = i;
     }
 
-    function reverseString(start, end)
-    {
-      
-    }
+    // slice the string and reverse it
+    var stringBefore = s.slice(0,stringStart);
+    var stringAfter = s.slice(stringEnd+1,s.length);
 
-    var set = brackets.length / 2;
-    // reverse the strings between brackets
+    var stringFull =  stringBefore + 
+                      s.slice(stringStart, stringEnd).split("").reverse().join("").replace("(","").replace(")","") + 
+                      stringAfter;
 
+    console.log(stringFull);
 
+    return stringFull;
+    // var array;
 
-    // need to check if brackets aren't beside each other
-    // have to somehow figure out if the brackets are contained in other brackets
-    // ((asdasd)) or (asdasd)(asdasdas)((asdasd)(asdasd)) or (asd)
+    // function reverseString(str) {
+    //   array = str.split("");
+    //   array.reverse();
+    //   str = array.join('');
+    //   return str;
+    // }
 
-    // reverse string in each set of brackets
-    for(let i = 0; i < set; i += 1) {
-
-    }
-
-    // remove the brackets after reverse
-    
   }
 
 
