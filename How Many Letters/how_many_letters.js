@@ -54,12 +54,12 @@ const countLetters = string => {
   var lettersArray = [];
   var totalLetters = {};
 
-  string.split('').forEach(letter => {
+  string.toLowerCase().split('').forEach(letter => {
     var count = 0;
 
     // check if letter was already counted
     if(lettersArray.indexOf(letter) == -1) {
-      string.split('').forEach(element => {
+      string.toLowerCase().split('').forEach(element => {
         if(element == letter) {
           count += 1;
         }
