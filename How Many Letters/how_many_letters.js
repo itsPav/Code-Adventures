@@ -71,8 +71,6 @@ const countLetters = string => {
   return totalLetters;
 }
 
-
-
 // Please don't change anything past this line!
 /*  Tests =================== */
 

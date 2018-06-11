@@ -1,15 +1,14 @@
 {
-    "name": "how-many-letters",
-    "version": "1.0.0",
-    "description": "Base project to build code adventures with testing from",
-    "main": "how_many_letters.js",
-    "scripts": {
-      "test": "mocha how_many_letters.js"
-    },
-    "author": "Randy Layne",
-    "license": "MIT",
-    "dependencies": {
-      "mocha": "^5.2.0"
-    }
+  "name": "how-many-letters",
+  "version": "1.0.0",
+  "description": "Base project to build code adventures with testing from",
+  "main": "how_many_letters.js",
+  "scripts": {
+    "test": "mocha how_many_letters.js"
+  },
+  "author": "Randy Layne",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^5.2.0"
   }
-  
+}
