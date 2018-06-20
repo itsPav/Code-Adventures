@@ -53,7 +53,6 @@ const countLetters = string => {
 
   var lettersArray = [];
   var totalLetters = {};
-
   string.split('').forEach(letter => {
     var count = 0;
 
