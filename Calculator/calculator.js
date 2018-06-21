@@ -95,24 +95,35 @@ function calculator(num1, num2, operator) {
 
   // Bonus challenge 2
   function primes(num) {
- 
-    // your code goes here
-    var arr;
+    var arr = [];
 
-    if(num > 3) {
-        arr.push("2");
-        arr.push("3");
-        if(num>6) {
-            for(let i = 6; i < num; i+6){
-                arr.push(i-1);
-                arr.push(i+1);
-            }
-        }
+    for(var i = 0; i < num; i++){
+      if(isPrime(i)) 
+        arr.push(i);
     }
 
     return arr;
     
   }
+
+  function isPrime(num) {
+    if(num < 2) 
+      return false;
+
+    // to check for a prime number, we don't need to divide it by itself, hence the i < num
+    // instead, we start from 2 and count up
+    // since i = 2 and 2 < 2, the loop never runs and 2 is added to the array
+    // when we check 3, 3%2 != 0, and it gets added.
+    // then we check 4, which is false
+    // then 5, which is true
+    // then 6 which is false and so on
+    for (var i = 2; i < num; i++) {
+        if(num%i==0)
+            return false;
+    }
+    
+    return true;
+  } 
 
 
 /** THE OUTPUT **************************************************************/
